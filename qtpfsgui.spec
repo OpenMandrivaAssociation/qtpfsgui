@@ -10,7 +10,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires:  qt4-devel
 BuildRequires:  libexiv-devel
-BuildRequires:  libOpenEXR4-devel
+BuildRequires:  libOpenEXR-devel
 BuildRequires:  fftw3-devel
 BuildRequires:  tiff-devel
 BuildRequires:  desktop-file-utils
