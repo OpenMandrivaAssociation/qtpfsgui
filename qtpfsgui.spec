@@ -13,6 +13,7 @@ BuildRequires:  libexiv2-devel
 BuildRequires:  libOpenEXR4-devel
 BuildRequires:  fftw3-devel
 BuildRequires:  tiff-devel
+BuildRequires:  desktop-file-utils
 
 %description
 
@@ -72,6 +73,13 @@ export QTDIR=/usr/lib/qt4/
 
 %install
 make DESTDIR=%buildroot install
+
+desktop-file-install --vendor="" \
+  --add-category="Qt" \
+  --add-category="X-MandrivaLinux-Multimedia-Graphics" \
+  --add-category="Graphics" \
+  --add-category="Photography" \
+  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
 %clean
 rm -rf %buildroot 
