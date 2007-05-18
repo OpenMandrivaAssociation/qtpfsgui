@@ -41,6 +41,13 @@ and 16bit, RAW) of the same scene taken at different exposure setting.
     * Copy exif data between sets of images.
     * Supports internationalization.
 
+
+%post
+%update_menus
+
+%postun
+%clean_menus
+
 %files
 %defattr(-,root,root)
 %{_bindir}/qtpfsgui
