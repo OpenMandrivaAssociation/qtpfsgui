@@ -9,7 +9,7 @@ Source:         %{name}-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires:  qt4-devel
-BuildRequires:  libexiv2-devel
+BuildRequires:  libexiv-devel
 BuildRequires:  libOpenEXR4-devel
 BuildRequires:  fftw3-devel
 BuildRequires:  tiff-devel
