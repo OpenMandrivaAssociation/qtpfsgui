@@ -1,11 +1,11 @@
 Name:           qtpfsgui
 Summary:        A Qt4 graphical user interface that provides a workflow for HDR imaging
-Version:        1.8.8
-Release:        %mkrel 3
+Version:        1.8.12
+Release:        %mkrel 1
 License:        LGPL
 Group:          Graphics
 Url:	        http://qtpfsgui.sourceforge.net/
-Source:         %{name}-%{version}.tar.bz2
+Source:         http://jaist.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires:  qt4-devel
@@ -74,7 +74,7 @@ and 16bit, RAW) of the same scene taken at different exposure setting.
 %build
 export QTDIR=/usr/lib/qt4/
 
-/usr/lib/qt4/bin/qmake PREFIX=%buildroot%_prefix
+%{qt4bin}/qmake PREFIX=%buildroot%_prefix
 
 %make
 
@@ -83,7 +83,6 @@ make DESTDIR=%buildroot install
 
 desktop-file-install --vendor="" \
   --add-category="Qt" \
-  --add-category="X-MandrivaLinux-Multimedia-Graphics" \
   --add-category="Graphics" \
   --add-category="Photography" \
   --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
