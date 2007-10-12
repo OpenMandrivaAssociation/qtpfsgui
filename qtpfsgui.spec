@@ -50,21 +50,11 @@ and 16bit, RAW) of the same scene taken at different exposure setting.
 
 %files
 %defattr(-,root,root)
+%doc AUTHORS ChangeLog README TODO
 %{_bindir}/qtpfsgui
 %{_datadir}/applications/qtpfsgui.desktop
 %{_datadir}/icons/hicolor/48x48/apps/qtpfsgui.png
-%{_datadir}/qtpfsgui/html/faq.html
-%{_datadir}/qtpfsgui/html/hints.html
-%{_datadir}/qtpfsgui/html/images/copy_exif.jpeg
-%{_datadir}/qtpfsgui/html/images/mainwin.jpeg
-%{_datadir}/qtpfsgui/html/images/resize.jpeg
-%{_datadir}/qtpfsgui/html/images/snap-qt4_3.jpeg
-%{_datadir}/qtpfsgui/html/images/snap-qt4_4.jpeg
-%{_datadir}/qtpfsgui/html/images/snap-qt4_5.jpeg
-%{_datadir}/qtpfsgui/html/images/snap-qt4_6.jpeg
-%{_datadir}/qtpfsgui/html/images/tonemapdialog.jpeg
-%{_datadir}/qtpfsgui/html/index.html
-%{_datadir}/qtpfsgui/html/manual.html
+%{_datadir}/qtpfsgui
 
 #--------------------------------------------------------------------
 
@@ -85,4 +75,3 @@ rm -fr %buildroot
 
 %clean
 rm -rf %buildroot 
-
