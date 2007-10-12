@@ -50,7 +50,7 @@ and 16bit, RAW) of the same scene taken at different exposure setting.
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS ChangeLog README TODO
+%doc AUTHORS Changelog README TODO
 %{_bindir}/qtpfsgui
 %{_datadir}/applications/qtpfsgui.desktop
 %{_datadir}/icons/hicolor/48x48/apps/qtpfsgui.png
