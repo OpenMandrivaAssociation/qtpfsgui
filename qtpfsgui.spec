@@ -6,6 +6,7 @@ License:        LGPL
 Group:          Graphics
 Url:	        http://qtpfsgui.sourceforge.net/
 Source:         http://jaist.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Patch0:		qtpfsgui-1.8.12-fix-desktop.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires:  qt4-devel
@@ -13,7 +14,6 @@ BuildRequires:  libexiv-devel
 BuildRequires:  libOpenEXR-devel
 BuildRequires:  fftw3-devel
 BuildRequires:  tiff-devel
-BuildRequires:  desktop-file-utils
 
 %description
 
@@ -70,6 +70,7 @@ and 16bit, RAW) of the same scene taken at different exposure setting.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 export QTDIR=/usr/lib/qt4/
@@ -79,13 +80,8 @@ export QTDIR=/usr/lib/qt4/
 %make
 
 %install
-make DESTDIR=%buildroot install
-
-desktop-file-install --vendor="" \
-  --add-category="Qt" \
-  --add-category="Graphics" \
-  --add-category="Photography" \
-  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
+rm -fr %buildroot
+%makeinstall_std
 
 %clean
 rm -rf %buildroot 
