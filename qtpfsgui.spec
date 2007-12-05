@@ -16,7 +16,6 @@ BuildRequires:  fftw3-devel
 BuildRequires:  tiff-devel
 
 %description
-
 Qtpfsgui is a Qt4 graphical user interface that aims to provide a 
 workflow for HDR imaging.
 Supported HDR formats:
