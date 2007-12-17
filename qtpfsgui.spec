@@ -7,7 +7,6 @@ Group:          Graphics
 Url:	        http://qtpfsgui.sourceforge.net/
 Source:         http://jaist.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
 Patch0:		qtpfsgui-1.8.12-fix-desktop.patch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires:  qt4-devel
 BuildRequires:  libexiv-devel
