@@ -1,12 +1,13 @@
 Name:		qtpfsgui
 Summary:	A Qt4 graphical user interface that provides a workflow for HDR imaging
 Version:	1.9.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	LGPL2+
 Group:		Graphics
 URL:		http://qtpfsgui.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Patch0:		qtpfsgui-1.8.12-fix-desktop.patch
+Patch1:		qtpfsgui-1.9.2-fix-str-fmt.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires:	qt4-devel
@@ -43,10 +44,11 @@ and 16bit, RAW) of the same scene taken at different exposure setting.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p0
 
 %build
 sed -i -e 's,QMAKE_CXXFLAGS,#QMAKE_CXXFLAGS,g' project.pro
-%{qt4bin}/qmake PREFIX=%{buildroot}%{_prefix} QMAKE_CXXFLAGS="%{optflags}"
+%qmake_qt4 PREFIX=%{buildroot}%{_prefix}
 %make
 
 %install
