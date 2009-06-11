@@ -1,8 +1,8 @@
 Name:		qtpfsgui
 Summary:	A Qt4 graphical user interface that provides a workflow for HDR imaging
-Version:	1.9.2
-Release:	%mkrel 2
-License:	LGPL2+
+Version:	1.9.3
+Release:	%mkrel 1
+License:	LGPLv2+
 Group:		Graphics
 URL:		http://qtpfsgui.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -15,6 +15,7 @@ BuildRequires:	libexiv-devel
 BuildRequires:	libOpenEXR-devel
 BuildRequires:	fftw3-devel
 BuildRequires:	tiff-devel
+BuildRequires:	dos2unix
 
 %description
 Qtpfsgui is a Qt4 graphical user interface that aims to provide a 
@@ -43,8 +44,12 @@ and 16bit, RAW) of the same scene taken at different exposure setting.
 
 %prep
 %setup -q
-%patch0 -p0
-%patch1 -p0
+%patch0 -p1 -b .fixdtop
+%patch1 -p1 -b .str
+
+# fix EOL
+dos2unix -U Changelog
+dos2unix -U qtpfsgui.desktop
 
 %build
 sed -i -e 's,QMAKE_CXXFLAGS,#QMAKE_CXXFLAGS,g' project.pro
@@ -63,6 +68,6 @@ rm -rf %{buildroot}
 %doc AUTHORS Changelog README TODO
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/icons/hicolor/48x48/apps/%{name}.png
+%{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/%{name}
 
