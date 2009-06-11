@@ -15,6 +15,7 @@ BuildRequires:	libexiv-devel
 BuildRequires:	libOpenEXR-devel
 BuildRequires:	fftw3-devel
 BuildRequires:	tiff-devel
+BuildRequires:	libgomp-devel
 BuildRequires:	dos2unix
 
 %description
