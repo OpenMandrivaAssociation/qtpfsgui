@@ -1,7 +1,7 @@
 Name:		qtpfsgui
 Summary:	A Qt4 graphical user interface that provides a workflow for HDR imaging
 Version:	1.9.3
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	LGPLv2+
 Group:		Graphics
 URL:		http://qtpfsgui.sourceforge.net/
