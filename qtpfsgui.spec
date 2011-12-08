@@ -49,8 +49,8 @@ and 16bit, RAW) of the same scene taken at different exposure setting.
 %patch1 -p1 -b .str
 
 # fix EOL
-dos2unix -U Changelog
-dos2unix -U qtpfsgui.desktop
+dos2unix Changelog
+dos2unix qtpfsgui.desktop
 
 %build
 sed -i -e 's,QMAKE_CXXFLAGS,#QMAKE_CXXFLAGS,g' project.pro
