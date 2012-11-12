@@ -1,0 +1,25 @@
+diff -p -up qtpfsgui-1.9.3/qtpfsgui.desktop.fixdtop qtpfsgui-1.9.3/qtpfsgui.desktop
+--- qtpfsgui-1.9.3/qtpfsgui.desktop.fixdtop	2008-10-15 19:44:49.000000000 +0200
++++ qtpfsgui-1.9.3/qtpfsgui.desktop	2009-06-11 19:13:05.000000000 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=Qtpfsgui
+ Name[en_US]=Qtpfsgui
+ GenericName=HDR imaging
+@@ -15,14 +14,9 @@ Comment[ru]=Qtpfsgui — програм�
+ Comment[it]=Qtpfsgui e' una interfaccia grafica usata per creare ed eseguire il tonemapping di immagini HDR
+ Comment[hu_HU]=Ez a program nagy megvilágítástartományú (HDR) képek előállítására és megtekintésére szolgál.
+ Exec=qtpfsgui
+-Icon=qtpfsgui.png
+-MimeType=
+-Path=
++Icon=qtpfsgui
+ StartupNotify=true
+ StartupWMClass=qtpfsgui
+ Terminal=false
+ Type=Application
+-X-DCOP-ServiceType=
+ X-KDE-SubstituteUID=false
+-X-KDE-Username=
+-#X-StandardInstall=false
