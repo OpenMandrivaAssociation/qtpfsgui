@@ -4,7 +4,7 @@ Version:	1.9.3
 Release:	%mkrel 4
 License:	LGPLv2+
 Group:		Graphics
-URL:		http://qtpfsgui.sourceforge.net/
+URL:		https://qtpfsgui.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Patch0:		qtpfsgui-1.8.12-fix-desktop.patch
 Patch1:		qtpfsgui-1.9.2-fix-str-fmt.patch
